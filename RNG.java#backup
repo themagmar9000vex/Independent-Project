@@ -1,0 +1,39 @@
+import java.util.Random;
+/**
+ * A class that represents a random number generator.
+ *
+ * @author Kush Khanna
+ * @version 1.0
+ */
+public class RNG
+{
+
+    public static boolean applyStatus(){
+        Random rand = new Random();
+        int n = rand.nextInt(99) + 1;
+        return n >= 50;
+    }
+    
+    public static boolean sideStatus(){
+        Random rand = new Random();
+        int n = rand.nextInt(99) + 1;
+        return n >= 70;
+    }
+    
+    public static double isCrit(){
+        Random rand = new Random();
+        int n = rand.nextInt(99) + 1;
+        if(n>=80){return 1.5;}
+        else{return 1;}        
+    }
+    
+    public static int pickMove(){
+        Random rand = new Random();
+        return rand.nextInt(3) + 1;
+    }
+    
+    public static int pickTrainer(){
+        Random rand = new Random();
+        return rand.nextInt(3) + 1;
+    }
+}
